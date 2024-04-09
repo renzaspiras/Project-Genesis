@@ -21,11 +21,16 @@ jobs:
       run: |
         pacman -Syu --noconfirm
 
-    - name: Install dependencies
+    - name: Install Rust toolchain
       run: |
         pacman -S --noconfirm rustup
         rustup-init -y
         source $HOME/.cargo/env
+        rustup update stable
+        rustup self upgrade-data
+
+    - name: Install dependencies
+      run: |
         pacman -S --noconfirm base-devel
 
     - name: Checkout code
