@@ -1,5 +1,5 @@
 section .data
-  hello db 'banana', 0
+  hello db 'hellos',0
   len equ $-hello
 
 section .text
@@ -12,6 +12,6 @@ _start:
   mov edx,len
   int 0x80
 
-  mov eax,0
+  mov eax,1
   mov ebx,ebx
   int 0x80

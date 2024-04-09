@@ -1,13 +1,13 @@
 # Live
 
-Just a game still on going written in assembly, and why assembly?
+Just a Bunch of systems written in assembly
 - I just want to torture myself.
 - I want to make a ligthweight applications which is friendly with low end devices
 
 ***
 ### Phase 1: Understanding and Learning Assembly
 ***
-#### Assembly Hello World
+#### Lesson 0: Assembly Hello World
 > Simple Dynamic Hello World in Assembly 
 ```ASM
 section .data
@@ -28,6 +28,8 @@ _start:
   mov ebx, ebx
   int 0x80
 ```
+
+#### Lesson 1: Assembly code compilation
 > How to compile it??? think of it that you make the file named hello.asm
 
 ```bash
