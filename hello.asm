@@ -1,6 +1,6 @@
 section .data
-  hello db 'hellos',0
-  len equ $-hello
+  streng db 'hipopopopopotamussssssssssssssssssssssss',0
+  len equ $-streng
 
 section .text
   global _start
@@ -8,7 +8,7 @@ section .text
 _start:
   mov eax,4
   mov ebx,1
-  mov ecx,hello
+  mov ecx,streng
   mov edx,len
   int 0x80
 
