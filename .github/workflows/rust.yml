@@ -11,12 +11,28 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    container:
+      image: archlinux:latest
+
     steps:
-    - uses: actions/checkout@v3
+    - name: Update system
+      run: |
+        pacman -Syu --noconfirm
+
+    - name: Install dependencies
+      run: |
+        pacman -S --noconfirm rustup
+        rustup-init -y
+        source $HOME/.cargo/env
+        pacman -S --noconfirm base-devel
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
     - name: Build
       run: cargo build
+
     - name: Run tests
       run: cargo test
