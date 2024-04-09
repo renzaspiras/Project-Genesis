@@ -10,7 +10,7 @@ fn main() {
     let width = 700;
 
     let window = Window::new(WindowType::Toplevel);
-    window.set_title("My Window");
+    window.set_title(title);
     window.set_default_size(width, height);
 
     // Connect the "destroy" event to quit the GTK main loop
