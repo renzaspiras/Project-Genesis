@@ -28,8 +28,8 @@ _start:
   mov ebx, ebx
   int 0x80
 ```
-
 > How to compile it??? think of it that you make the file named hello.asm
-```
+
+```bash
 nasm -f elf32 hello.asm && ld -m elf_i386 -o hello hello.o && ./hello
 ```
